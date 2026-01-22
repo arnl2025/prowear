@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Nordic Golf Shop - Checkout </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">⛳ Nordic Golf Shop</div>
+  <nav>
+    <a href="index.html">Hem</a>
+    <a href="products.html">Produkter</a>
+    <select onchange="setLanguage(this.value)">
+      <option value="sv">SV</option>
+      <option value="en">EN</option>
+      <option value="fi">FI</option>
+      <option value="no">NO</option>
+      <option value="da">DA</option>
+    </select>
+  </nav>
+</header>
+
+<main class="checkout">
+  <h2>Check Out</h2>
+
+  <!-- Steg 1: Kundinfo -->
+  <form id="infoForm">
+    <input required id="phone" name="phone" placeholder="Betalande Telefonnummer">
+    <input required id="fullname" name="fullname" placeholder="Fulla Namn">
+    <input required id="email" name="email" type="email" placeholder="Mail">
+    <input required id="address" name="address" placeholder="Adress">
+    <input required id="city" name="city" placeholder="Ort">
+    <input required id="postcode" name="postcode" placeholder="Postkod">
+    <button type="submit">Skicka och gå vidare</button>
+  </form>
+
+  <!-- Steg 2: QR (dolt tills info skickats) -->
+  <div id="qrSection" style="display:none; text-align:center; margin-top:20px;">
+    <p id="swishText">Swisha beloppet med QR-koden nedan</p>
+    <img id="qr" alt="Swish QR" width="200">
+    <p>Ordern har skickats till personal och blir behandlad när köpet avslutas!</p>
+  </div>
+</main>
+
+<footer>
+  <p>Nordic Golf Shop 2026-2029 ©</p>
+</footer>
+
+<script src="products.js"></script>
+<script src="i18n.js"></script>
+<script src="script-checkout.js"></script>
+</body>
+</html>
