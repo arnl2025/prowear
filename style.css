@@ -1,0 +1,214 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* BAS */
+body {
+  background: #f6f6f6;
+  color: #111;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* HEADER */
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 16px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+nav a {
+  margin-left: 24px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* MAIN */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* PRODUKTER */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+.product {
+  position: relative;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* PRODUKTBILD */
+.product-image-wrapper {
+  width: 100%;
+}
+
+.product img {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 10px;
+  margin-bottom: 14px;
+}
+
+/* STORT RÖTT X ÖVER HELA PRODUKTEN */
+.sold-out {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8rem;
+  color: rgba(200, 0, 0, 0.85);
+  font-weight: 800;
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* PRODUKTINFO */
+.product h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.product .description {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.product p {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+/* KNAPP */
+.product button {
+  margin-top: auto;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.product button:hover {
+  opacity: 0.85;
+}
+
+/* INAKTIV KNAPP */
+button.disabled,
+button:disabled {
+  background: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+/* CHECKOUT */
+.checkout {
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.checkout h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+#infoForm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+#infoForm input {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+#infoForm button {
+  margin-top: 10px;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+#infoForm button:hover {
+  opacity: 0.85;
+}
+
+/* QR */
+#qrSection {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#qrSection img {
+  margin-top: 16px;
+  border-radius: 12px;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 60px;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* MOBIL */
+@media (max-width: 600px) {
+  header {
+    padding: 14px 20px;
+  }
+
+  nav a {
+    margin-left: 14px;
+  }
+
+  main {
+    padding: 30px 16px;
+  }
+}
